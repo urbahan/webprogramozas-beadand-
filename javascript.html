@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS CRUD - Pizza Manager Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Web programozás-1 Előadás Házi feladat</h1> [cite: 3, 36]
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="javascript.html" class="active">JS CRUD</a></li>
+            <li><a href="fetchapi.html">Fetch API</a></li>
+            <li><a href="oojs.html">OOJS Grafika</a></li>
+        </ul>
+    </nav>
+
+    <main class="crud-container">
+        <section class="glass-card">
+            <div class="card-header">
+                <h2><i class="fas fa-pizza-slice"></i> Pizza Kezelő (Tömb alapú)</h2>
+                <p>Adatok kezelése lokális változókban [cite: 6, 39]</p>
+            </div>
+            
+            <form id="pizzaForm" onsubmit="event.preventDefault(); savePizza();">
+                <input type="hidden" id="pizzaIndex">
+                <div class="input-group">
+                    <input type="text" id="pizzaName" placeholder="Pizza neve" required>
+                    <input type="number" id="pizzaPrice" placeholder="Ár (Ft)" required>
+                    <button type="submit" id="saveBtn" class="btn-main">
+                        <i class="fas fa-plus-circle"></i> Hozzáadás
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <div class="table-wrapper">
+            <table id="pizzaTable">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Pizza Neve</th>
+                        <th>Egységár</th>
+                        <th>Műveletek</th>
+                    </tr>
+                </thead>
+                <tbody id="pizzaBody">
+                    </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>Készítők: Urbaniczki Hanna (JMNUMY) és Mladenovic Hermina (D4YO8S) </p> 
+    </footer>
+
+    <script src="js_crud.js"></script>
+</body>
+</html>
