@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS Grafika - Pizza Rain</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #canvas-container {
+            position: relative;
+            width: 100%;
+            height: 600px;
+            background: #2c3e50;
+            overflow: hidden;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+        .pizza-icon {
+            position: absolute;
+            user-select: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Web programozás-1 Előadás Házi feladat</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="javascript.html">JS CRUD</a></li>
+            <li><a href="fetchapi.html">Fetch API</a></li>
+            <li><a href="oojs.html" class="active">OOJS Grafika</a></li>
+        </ul>
+    </nav>
+
+    <main class="crud-container">
+        <section class="glass-card">
+            <h2><i class="fas fa-project-diagram"></i> Objektumorientált Grafika</h2>
+            <p>Kattints a területre új pizzák létrehozásához! Az alkalmazás <code>class</code>, <code>extends</code> és <code>super</code> kulcsszavakat használ.</p>
+            <div id="canvas-container"></div>
+        </section>
+    </main>
+
+    <script src="oojs_app.js"></script>
+    <footer>
+        <p>Készítők: [Te Neved] - [Neptun]</p>
+    </footer>
+</body>
+</html>
