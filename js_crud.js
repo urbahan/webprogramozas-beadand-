@@ -61,13 +61,13 @@ function savePizza() {
         const index = indexInput.value;
         pizzas[index] = pizzaData;
         
-        // Visszaállítás alapállapotba
+        
         indexInput.value = "";
         saveBtn.innerHTML = '<i class="fas fa-plus-circle"></i> Hozzáadás';
         saveBtn.style.background = "#27ae60"; 
     }
 
-    // Form ürítése és táblázat frissítése
+    
     nameInput.value = "";
     priceInput.value = "";
     displayPizzas();
