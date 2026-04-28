@@ -1,4 +1,4 @@
-// Alaposztály a leeső elemeknek
+
 class FallingElement {
     constructor(container) {
         this.container = container;
@@ -51,7 +51,7 @@ class Pizza extends FallingElement {
 const container = document.getElementById('canvas-container');
 const elements = [];
 
-// Kezdeti elemek létrehozása
+
 for (let i = 0; i < 15; i++) {
     const p = new Pizza(container);
     p.render();
