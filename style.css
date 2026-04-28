@@ -119,7 +119,7 @@ footer {
 
 
 
-/* CRUD Specifikus stílusok */
+
 .crud-container {
     max-width: 1000px;
     margin: 2rem auto;
@@ -174,7 +174,7 @@ footer {
     background: #219150;
 }
 
-/* Táblázat design */
+
 .table-wrapper {
     background: white;
     border-radius: 15px;
