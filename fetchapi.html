@@ -28,37 +28,42 @@
                 <p>Adatok tárolása szerver oldali MySQL adatbázisban</p>
             </div>
             
-            <form id="fetchPizzaForm" onsubmit="event.preventDefault(); handlePizzaSubmit();">
-                <input type="hidden" id="fetchPizzaId">
-                <div class="input-group">
-                    <input type="text" id="fetchPizzaName" placeholder="Pizza neve" required>
-                    <input type="number" id="fetchPizzaPrice" placeholder="Ár (Ft)" required>
-                    <button type="submit" id="fetchSaveBtn" class="btn-main">
-                        <i class="fas fa-cloud-upload-alt"></i> Küldés a szerverre
-                    </button>
-                </div>
-            </form>
-        </section>
+            <form id="fetchPizzaForm" onsubmit="event.preventDefault(); handlePizzaSubmit()">
+    <input type="hidden" id="fetchPizzaId">
+    <div class="input-group">
+        <input type="text" id="fetchPizzaName" placeholder="Pizza neve" required>
+        
+        <input type="text" id="fetchPizzaCategory" placeholder="Kategória (pl. lovag)" required>
+        
+        <div class="vega-check">
+            <label for="fetchPizzaVega">Vegetáriánus?</label>
+            <input type="checkbox" id="fetchPizzaVega">
+        </div>
 
-        <div class="table-wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Pizza Neve</th>
-                        <th>Ár (Ft)</th>
-                        <th>Műveletek</th>
-                    </tr>
-                </thead>
-                <tbody id="fetchPizzaBody">
-                    </tbody>
-            </table>
+        <button type="submit" id="fetchSaveBtn" class="btn-main">
+            <i class="fas fa-cloud-upload-alt"></i> Küldés a szerverre
+        </button>
+    </div>
+</form>
+
+<table class="crud-table">
+    <thead>
+        <tr>
+            <th>Pizza Neve</th>
+            <th>Kategória</th>
+            <th>Vega?</th>
+            <th>Műveletek</th>
+        </tr>
+    </thead>
+    <tbody id="fetchPizzaBody">
+        </tbody>
+</table>
         </div>
     </main>
 
     <script src="fetch_crud.js"></script>
     <footer>
-        <p>Készítők:Készítők: Urbaniczki Hanna (JMNUMY) és Mladenovic Hermina (D4YO8S) </p>
+        <p>Készítők: Urbaniczki Hanna (JMNUMY) és Mladenovic Hermina (D4YO8S) </p>
     </footer>
 </body>
 </html>
