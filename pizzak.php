@@ -8,6 +8,7 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 
 $host = 'localhost';
 $dbname = 'pizzak'; 
+$user = 'pizzak';   
 $pass = 'Hanna2317';            
 
 try {
@@ -15,7 +16,7 @@ try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
-    // Ha nem sikerül kapcsolódni, hibaüzenet küldése JSON formátumban
+    
     die(json_encode(["error" => "Kapcsolódási hiba: " . $e->getMessage()]));
 }
 
